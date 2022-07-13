@@ -1,0 +1,18 @@
+# taking input from the user 
+held_classes = int(input("Enter number of classes held : "))
+attended_classes = int(input("Enter number of classes attended : "))
+
+#calculating the percentage 
+percentage_of_class_attended =( attended_classes/held_classes )*100
+print("Percentage of class attended ",percentage_of_class_attended )  #printing the percentage 
+
+#if percantage is greater than 75 he can sit in exam
+
+if percentage_of_class_attended >= 75:
+    print("You are allowed to sit in the examination. ")
+else :   # if  percantage is less than 75 , we will ask for any medical cause from the student if any
+    medical =  input("Enter if you have a medical cause or not ( 'Y' for yes or 'N' for no )")
+    if medical == 'Y':   #having a medical cause he can sit in the exam otherwise not.
+        print("You are allowed to sit in the exam. ")
+    else :
+        print("You are not allowed to give Exam.")
